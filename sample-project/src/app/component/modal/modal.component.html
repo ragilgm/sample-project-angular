@@ -1,0 +1,19 @@
+<div class="modal-header">
+    <h4 class="modal-title">Tambah User</h4>
+</div>
+<div class="modal-body">
+    <form [formGroup]="createUser" (ngSubmit)="saveUser()">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" formControlName="name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" formControlName="email" name="email">
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" (click)="bsModalRef.hide()">Batal</button>
+            <button type="submit" class="btn btn-primary">Simpan</button>
+        </div>
+    </form>
+</div>

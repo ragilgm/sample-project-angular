@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <h3>CRUD Users</h3>
+    </div>
+    <div class="col text-end">
+      <button class="btn btn-primary" (click)="openAddUserModal()">Add User</button>
+    </div>
+  </div>
+  
+  <!-- table component -->
+  <app-table [tableData]="dataUsers" (editClicked)="onEditUserModal($event)" (deleteClicked)="onDeleteUser($event)" ></app-table>
+
+</div>
